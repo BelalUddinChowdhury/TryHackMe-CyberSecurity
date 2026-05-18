@@ -21,7 +21,7 @@ In this task, I explored **Ping**, one of the most fundamental network diagnosti
 * **Network Metrics:** Analyzed **RTT (Round Trip Time)** to measure network latency and **TTL (Time to Live)** to understand the packet's lifespan across routers.
 
 #### Practical Lab Output (Ping Success):
-<img width="1918" height="971" alt="image" src="https://github.com/user-attachments/assets/9e0607d0-3acb-41b1-ba41-47477969cb48" />
+<img width="950" height="603" alt="Ping" src="https://github.com/user-attachments/assets/19a53496-ff9b-4497-8c39-14ec3f24679a" />\
 #### Real-Life Application in Defensive Security (Blue Team):
 1. **System Diagnostics (Alive Checks):** Instantly verifying if a critical enterprise database or server is online or completely crashed before initiating deeper troubleshooting.
 2. **Command & Control (C2) Detection:** Monitoring network traffic logs for abnormal, highly repetitive ICMP signals (known as *C2 Beaconing*), which often indicates compromised internal hosts secretly communicating with an attacker's infrastructure.
