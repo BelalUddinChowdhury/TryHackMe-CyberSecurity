@@ -76,6 +76,43 @@ As a final challenge in this room, I completed the **OSI Dungeon** hands-on lab 
 * Knowledge of Defensive Security and traffic monitoring for a **SOC Analyst** perspective.
 * Practical troubleshooting and core network-layer analysis.
 
+* ## 📦 Module: Packets & Frames — Practical Lab Analysis
+
+### 1. Transmission Control Protocol (TCP) Architecture
+* **Stateful Connection Establishment (Three-Way Handshake):** Analyzed the precise mechanism used by end-hosts to synchronize and establish a reliable session.
+  1. `SYN` (Synchronize): Client initiates the connection by transmitting a dynamic sequence number.
+  2. `SYN-ACK` (Synchronize-Acknowledge): Server acknowledges the client's request and sends its own synchronization sequence.
+  3. `ACK / DATA` (Established): Client sends the final acknowledgement packet, injecting the initial data payload into this frame to finalize the connection state.
+
+* **Stateful Connection Teardown (Four-Way Handshake):** Simulated the graceful termination of a TCP session to prevent orphaned sockets or data loss.
+  1. `FIN-ACK` (Client): Client requests session termination after completing data transmission.
+  2. `ACK` (Server): Server acknowledges the termination request.
+  3. `FIN-ACK` (Server): Server closes its downstream socket and sends its final close notification.
+  4. `ACK` (Client): Client transmits the final `ACK` (`Okay, Goodbye`), transitioning the session into a closed state.
+
+### 2. User Datagram Protocol (UDP) Mechanics
+* **Stateless Communication:** Evaluated the operational logic of connectionless traffic, where data delivery tracking, sequence numbering, and acknowledgements are omitted to eliminate processing overhead.
+* **Header Structure:** Investigated the minimal 8-byte UDP header configuration:
+  * `Source Port` & `Destination Port`: Routing entry and exit points.
+  * `Length`: Defines the total size of the UDP segment (header + payload).
+  * `Checksum`: Provides optional integrity verification against bit-level corruption.
+* **Use Cases:** Latency-sensitive environments such as live video streaming, DNS (Port 53), VoIP, and multiplayer online gaming.
+
+### 3. Port Security & Layer 4 Service Binding
+* **Well-Known Ports (0 - 1023):** Reviewed core protocol-to-port mappings critical for infrastructure security and firewall rule configuration:
+  * `Port 21`: File Transfer Protocol (FTP)
+  * `Port 22`: Secure Shell (SSH)
+  * `Port 80`: HyperText Transfer Protocol (HTTP)
+  * `Port 443`: HyperText Transfer Protocol Secure (HTTPS)
+  * `Port 445`: Server Message Block (SMB)
+* **Practical Challenge Implementation:** Conducted targeted socket connectivity testing to a specific host IP (`8.8.8.6`) on a non-standard port (`1234`), successfully verifying service responsiveness and retrieving the session flag: `THM{TCP_CHATTER}`.
+
+* ---
+### 🛠️ Lab Verifications & Artifacts
+* **Simulation Environment:** TryHackMe Interactive Network Sandbox
+* **Lab Completion Status:** 100% Successfully Completed
+* **Captured Session Flag:** `THM{TCP_CHATTER}`
+
 *"The best way to secure a network is to understand how it communicates from the ground up."* 💻🛡️
 
 
