@@ -122,3 +122,17 @@ As a final challenge in this room, I completed the **OSI Dungeon** hands-on lab 
 * **Configured Rules:** * `198.51.100.34` ➡️ `203.0.110.1` ➡️ `80` ➡️ `DROP`
   * `203.0.113.99` ➡️ `203.0.110.1` ➡️ `80` ➡️ `DROP`
 * **Captured Session Flag:** `THM{FIREWALLS_RULE}`
+
+---
+
+## 📦 Room 3: Extending Your Network (Complete Summary)
+
+Successfully completed the final practical modules covering Firewalls, VPN mechanics, and Layer 2/3 network simulation routing.
+
+### 🎮 Final Lab Implementation: Multi-Node Network Simulator
+* **Objective:** Simulated a stateful data transmission across a distributed local area network infrastructure.
+* **Execution Parameters:** * Source Node: `computer1`
+  * Destination Node: `computer3`
+  * Transport Layer Protocol: `TCP`
+* **Network Logging Metrics:** Monitored the real-time execution of the TCP Three-Way Handshake, verifying dynamic sequence tracking and socket synchronization across intermediate routing devices. Captured exactly 5 handshake verification entries within the systemic network logs.
+* **Captured Session Flag:** `THM{YOU'VE_GOT_DATA}`
