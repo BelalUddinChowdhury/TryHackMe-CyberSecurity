@@ -115,4 +115,10 @@ As a final challenge in this room, I completed the **OSI Dungeon** hands-on lab 
 
 *"The best way to secure a network is to understand how it communicates from the ground up."* 💻🛡️
 
-
+---
+### 🛠️ Lab Implementation & Artifacts
+* **Simulation Environment:** TryHackMe Interactive Firewall Simulator
+* **Objective:** Mitigated malicious HTTP traffic targeted at Web Server (`203.0.110.1`) on Port `80`.
+* **Configured Rules:** * `198.51.100.34` ➡️ `203.0.110.1` ➡️ `80` ➡️ `DROP`
+  * `203.0.113.99` ➡️ `203.0.110.1` ➡️ `80` ➡️ `DROP`
+* **Captured Session Flag:** `THM{FIREWALLS_RULE}`
